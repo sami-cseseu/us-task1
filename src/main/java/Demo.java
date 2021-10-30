@@ -21,9 +21,10 @@ public class Demo {
 	}
 	
 	public void saveEmailtNewsLetter(HttpServletRequest req, HttpServletResponse resp) throws SQLException, IOException{
-		String email = req.getParameter("email");// source
+		String email = req.getParameter("email");
+		String option = req.getParameter("option");
 		NewsLetter newsLetter = new NewsLetter();
-		newsLetter.checkAndSave(email);
+		newsLetter.checkAndSave(email, option);
 	}
 	
 }
